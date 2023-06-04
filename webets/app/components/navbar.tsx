@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image';
 import Link from 'next/link';
 import {FaInstagram,FaBars} from 'react-icons/fa';
 import styles from '../../styles';
@@ -22,7 +22,7 @@ export default function NavBar() {
         <div className='flex mx-auto justify-between p-2 md:p-6 sticky'>
           <button className='rounded-2xl bg-e6palette-100'>
             <Link href='/'>
-              <img src='/etslogo1.png' width={165} height={200} alt = 'logo' className=''  />
+              <Image src='/etslogo1.png' width={165} height={200} alt = 'logo' className=''  />
             </Link>
           </button>
         </div>
@@ -31,7 +31,7 @@ export default function NavBar() {
       <section className='sm:hidden p-2'>
           <button className='p 2w-16 h-12 rounded-xl bg-e6palette-100'>
             <Link href='/'>
-              <img src='/etslogo1cut.png' width={70} height={100} alt = 'logo' className='p-2'  />
+              <Image src='/etslogo1cut.png' width={70} height={100} alt = 'logo' className='p-2'  />
             </Link>
           </button>
       </section>
