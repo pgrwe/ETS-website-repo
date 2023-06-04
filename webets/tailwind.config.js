@@ -8,11 +8,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'e6palette':{
+          100: '#cce3e3',
+          200: '#c2a47e',
+          300: '#8f596c',
+          400: '#5b3f69',
+          500: '#332945',
+          600: '#231c24',
+        },
         'paper_purple_dark': '#3b405e',
         'paper_purple_light': '#4f3a54',
         'paper_pink_cream': '#a4929a',
         'paper_cream': '#e4dbba',
-
+// TODO: Need to fix this templating
         'foggy_purple-800': '#1e0721',
         'foggy_purple-700': '#23132d',
         'foggy_purple-600': '#26203a',
