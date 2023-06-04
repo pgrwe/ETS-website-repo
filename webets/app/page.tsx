@@ -10,7 +10,7 @@ export default function Home() {
        Studio
        </h2>
       <h3 className='w-full text-center text-base md:text-2xl lg:text-3xl p-12 md:p-20 lg:p-24'>
-      Binghamton University's premier MakerSpace.
+      Binghamton University&apos;s premier MakerSpace.
       <br/>
       Specializing in all things 3D.
       </h3>
