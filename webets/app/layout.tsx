@@ -7,7 +7,7 @@ const etsfont = Space_Grotesk({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'ETS | Homepage',
-  description: 'Welcome to the unofficial website Emerging Technologies Studio',
+  description: 'Unofficial website for the Emerging Technology Studio @ Binghamton University',
 }
 
 export default function RootLayout({
