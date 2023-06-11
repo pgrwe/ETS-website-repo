@@ -16,10 +16,10 @@ export default function NavBar() {
     variants={navVariants} 
     initial='hidden'
     whileInView='show'
-    className={'${styles.xPaddings} relative border-t-2 border-e6palette-200/50'}>
+    className={'${styles.xPaddings} relative'}>
       {/* Desktop Navigation */}
       <section className='hidden sm:block'>
-        <div className='flex mx-auto justify-between p-2 md:p-6 sticky'>
+        <div className='flex relative mx-auto justify-between p-5'>
           <button className='rounded-2xl bg-e6palette-100'>
             <Link href='/'>
               <Image src='/etslogo1.png' width={165} height={200} alt = 'logo' className=''  />
@@ -28,7 +28,7 @@ export default function NavBar() {
         </div>
       </section>
       {/* Mobile Navigation */}
-      <section className='sm:hidden p-2'>
+      <section className='sm:hidden px-2 pt-3 pb-1'>
           <button className='p 2w-16 h-12 rounded-xl bg-e6palette-100'>
             <Link href='/'>
               <Image src='/etslogo1cut.png' width={70} height={100} alt = 'logo' className='p-2'  />

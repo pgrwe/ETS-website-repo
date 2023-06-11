@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '3.25xl' : '3.25rem',
+        '1.25base' : '1.4rem'
+      },
       colors: {
         'e6palette':{
           100: '#cce3e3',
