@@ -7,9 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['IBM Plex Mono', 'latin', 'monospace'],
+        body: ['IBM Plex Mono', 'latin', 'monospace'],
+    },
       fontSize: {
-        '3.25xl' : '3.25rem',
-        '1.25base' : '1.4rem'
+        'bigwords' : '3.25rem',
+        'subwords' : '1.4rem'
       },
       colors: {
         'e6palette':{

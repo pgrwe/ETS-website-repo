@@ -1,5 +1,6 @@
 import NavBar from './components/navbar'
 import Background from './components/background'
+import Hours from './components/hours'
 import './globals.css'
 import { Space_Grotesk } from 'next/font/google'
 
@@ -18,9 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={etsfont.className}>
       <body className='bg-gradient-to-br bg-e6palette-600'>
-        <NavBar/>
         <Background/>
+        <NavBar/>
         {children}
+        <Hours/>
         </body>
     </html>
   )

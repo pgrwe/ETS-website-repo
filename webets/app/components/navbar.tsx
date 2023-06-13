@@ -2,39 +2,48 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {FaInstagram,FaBars} from 'react-icons/fa';
-import styles from '../../styles';
-import {navVariants} from '../../styles/motion';
 import {motion} from 'framer-motion';
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
+import { IBM_Plex_Mono } from 'next/font/google';
+
+
+const navfont = IBM_Plex_Mono({weight: '500', subsets: ['latin']})
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+const navbarVariants = {
+  hidden: { translateY: '-100%' },
+  visible: { translateY: 0 },
+};
 
 
 export default function NavBar() {
-  const [is_open, nav_is_open] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
   return (
     <motion.nav 
-    variants={navVariants} 
-    initial='hidden'
-    whileInView='show'
-    className={'${styles.xPaddings} relative'}>
-      {/* Desktop Navigation */}
-      <section className='hidden sm:block'>
-        <div className='flex relative mx-auto justify-between p-5'>
-          <button className='rounded-2xl bg-e6palette-100'>
-            <Link href='/'>
-              <Image src='/etslogo1.png' width={165} height={200} alt = 'logo' className=''  />
-            </Link>
-          </button>
-        </div>
-      </section>
-      {/* Mobile Navigation */}
-      <section className='sm:hidden px-2 pt-3 pb-1'>
-          <button className='p 2w-16 h-12 rounded-xl bg-e6palette-100'>
-            <Link href='/'>
-              <Image src='/etslogo1cut.png' width={70} height={100} alt = 'logo' className='p-2'  />
-            </Link>
-          </button>
-      </section>
+      className='p-4 md:p-6 fixed w-screen flex flex-row justify-start items-center z-40'>
+      <Link href='/' className=' drop-shadow-xl'>
+        <Image src='/etslogo1cut.png' width={60} height={0} alt = 'logo' className=''  />
+      </Link>
+      <div className='ml-auto pr-6 font-display text-xl flex flex-row gap-16 text-e6palette-100'>
+        <Link href='/about' className='drop-shadow-xl'>
+          About
+        </Link>
+        <Link href='/services' className='drop-shadow-xl'>
+          Services
+        </Link>
+        <Link href='/services' className='drop-shadow-xl'>
+          Contact
+        </Link>
+      </div>
     </motion.nav>
-  )
+  );
 }
