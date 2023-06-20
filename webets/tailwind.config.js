@@ -23,6 +23,7 @@ module.exports = {
           400: '#5b3f69',
           500: '#332945',
           600: '#231c24',
+          700: '#acbfbf',
         },
         'paper_purple_dark': '#3b405e',
         'paper_purple_light': '#4f3a54',

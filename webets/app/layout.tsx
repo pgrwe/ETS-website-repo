@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={etsfont.className}>
-      <body className='bg-gradient-to-br bg-e6palette-600'>
+      <body className='bg-gradient-to-br bg-e6palette-600 overscroll-contain'>
         <Background/>
         <NavBar/>
         {children}

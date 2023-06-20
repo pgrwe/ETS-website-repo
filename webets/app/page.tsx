@@ -1,5 +1,4 @@
 import './globals.css'
-import { FaChevronDown } from 'react-icons/fa'
 import { FaVectorSquare } from 'react-icons/fa'
 
 export default function Home() {
@@ -23,9 +22,6 @@ export default function Home() {
         <br/>
         Premier MakerSpace.
       </h3>
-      <div className='fixed bottom-0 w-full flex flex-col items-center justify-center'>
-        <FaChevronDown size={35} className='animate-bounce'/>
-      </div>
     </div>
   )
 }
