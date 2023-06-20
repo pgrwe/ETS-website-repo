@@ -17,7 +17,7 @@ export default function Home() {
           Studio
           <FaVectorSquare size={35} className='animate-pulse relative object-fill inline pb-1 ml-4'/>
        </h1>
-      <h3 className='pt-32 text-center mx-auto text-2xl/7'>
+      <h3 className='pt-32 text-center mx-auto text-2xl/7 font-medium'>
         Binghamton University&apos;s 
         <br/>
         Premier MakerSpace.

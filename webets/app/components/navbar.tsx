@@ -33,7 +33,7 @@ export default function NavBar() {
       <Link href='/' className=' drop-shadow-xl'>
         <Image src='/etslogo1cut.png' width={60} height={0} alt = 'logo' className=''  />
       </Link>
-      <div className='ml-auto pr-6 font-display text-xl flex flex-row gap-16 text-e6palette-100'>
+      <div className='hidden ml-auto pr-6 font-display text-xl md:flex flex-row gap-16 text-e6palette-100'>
         <Link href='/about' className='drop-shadow-xl'>
           About
         </Link>
@@ -44,6 +44,17 @@ export default function NavBar() {
           Contact
         </Link>
       </div>
+      {/* <div className='flex flex-row md:hidden ml-auto'>
+        <Link href='/'>
+          Drop
+        </Link>
+        <Link href='/'>
+        </Link>
+        <Link href='/'>
+        </Link>
+        <Link href='/'>
+        </Link>
+      </div> */}
     </motion.nav>
   );
 }
