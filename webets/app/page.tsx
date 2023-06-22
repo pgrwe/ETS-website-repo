@@ -1,8 +1,6 @@
 'use client'
 import './globals.css'
-import Text from './components/text'
 import { FaVectorSquare } from 'react-icons/fa'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 

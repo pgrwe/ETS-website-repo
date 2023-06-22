@@ -34,15 +34,17 @@ export default function NavBar() {
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
         </Link>
 
-        <Link href='/about' className="group">
+        <button  
+          className="group">
           <div className="drop-shadow-xl">Services</div>
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
-        </Link>
+        </button>
 
         <Link href='/about' className="group">
           <div className="drop-shadow-xl">Contact</div>
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
         </Link>
+
       </div>
       {/* <div className='flex flex-row md:hidden ml-auto'>
         <Link href='/'>
