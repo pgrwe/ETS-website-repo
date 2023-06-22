@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import {FaInstagram,FaBars} from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa'
 import {motion ,useScroll, useTransform} from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { IBM_Plex_Mono } from 'next/font/google';
@@ -14,11 +14,9 @@ import { IBM_Plex_Mono } from 'next/font/google';
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
 
-  let {scrollYProgress} = useScroll();
-  let ytransform = useTransform(scrollYProgress, [0,1], ['0%','100%']);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-  };
+  }
 
   return (
     <nav 
@@ -34,10 +32,20 @@ export default function NavBar() {
           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
         </Link>
 
-        <button  
-          className="group">
-          <div className="drop-shadow-xl">Services</div>
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
+        <button
+          onClick={toggleMenu}  
+          className="group relative">
+          <div className="drop-shadow-xl">
+            Services <FaChevronDown size = {10} className='inline'/>
+          </div> 
+          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"/>
+          {showMenu && (
+            <ul className='absolute'>
+              <li>3D Printing</li>
+              <li>2D Editing & Design</li>
+              <li>3D Editing & Design</li>
+            </ul>
+          )}
         </button>
 
         <Link href='/about' className="group">
