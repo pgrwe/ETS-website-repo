@@ -1,14 +1,20 @@
+'use client'
 import './globals.css'
+import Text from './components/text'
 import { FaVectorSquare } from 'react-icons/fa'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+
 
 export default function Home() {
   return (
-    <div className='min-h-screen pt-16 flex flex-col mx-4 justify-center 
+    <div 
+    className='min-h-screen pt-16 flex flex-col mx-4 justify-center 
     drop-shadow-lg text-e6palette-200'
     >
       <h2 className='text-2xl self-center'>Welcome to the...</h2>
-        <h1 className='pt-2 font-semibold self-center
-        transition-all duration-300
+        <h1 
+        className='pt-2 font-semibold self-center 
         text-[3.3rem]/tight md:text-[4.0rem]'
         >
           <FaVectorSquare size={35} className='animate-pulse hidden lg:inline relative object-fill pb-1 mr-4'/>

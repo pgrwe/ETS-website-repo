@@ -24,6 +24,8 @@ module.exports = {
           500: '#332945',
           600: '#231c24',
           700: '#acbfbf',
+          800: '#826f56',
+          900: '#322E33',
         },
         'paper_purple_dark': '#3b405e',
         'paper_purple_light': '#4f3a54',
