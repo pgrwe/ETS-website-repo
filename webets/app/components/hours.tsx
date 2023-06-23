@@ -3,14 +3,17 @@ import Text from './text'
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { AnimatePresence, motion } from "framer-motion";
+import { IBM_Plex_Mono } from 'next/font/google';
+
+const hoursfont = IBM_Plex_Mono({weight: '500', subsets: ['latin']})
 
 export default function Hours() {
+
   const [text, setText] = useState("3D Printing");
   const maplink = "https://www.google.com/maps/place/Technology+Hub/@42.0879452,-75.9686934,21z/data=!4m6!3m5!1s0x89daeec7ec578bd3:0x77cf798f5a65429a!8m2!3d42.08799!4d-75.9685948!16s%2Fg%2F11c1nq96tg?entry=ttu"
   const texts = ["3D Printing", "2D/3D Design", "2D/3D Editing",
   "3D Scanning", "Virtual Reality", "Photo/Video Editing",
   "CNC", "Cricut"];
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +30,9 @@ export default function Hours() {
   }, []);
   return (
     <div 
-    className='bg-e6palette-700 drop-shadow-sm text-3xl text-e6palette-600 md:text-4xl min-h-screen'>
+    className=' font-body
+    bg-e6palette-700 drop-shadow-sm 
+    text-3xl text-e6palette-600 md:text-4xl min-h-screen'>
       <h1 className=' flex pt-16 justify-center text-6xl font-bold text-e6palette-500'>
       Hours
       </h1> 

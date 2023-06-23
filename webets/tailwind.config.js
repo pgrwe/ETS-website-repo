@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['IBM Plex Mono', 'latin', 'monospace'],
+        display: ['IBM Plex Sans', 'latin', 'monospace'],
         body: ['IBM Plex Mono', 'latin', 'monospace'],
     },
       fontSize: {
