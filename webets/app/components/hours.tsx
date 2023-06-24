@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from "framer-motion";
 import { IBM_Plex_Mono } from 'next/font/google';
 
-const hoursfont = IBM_Plex_Mono({weight: '500', subsets: ['latin']})
 
 export default function Hours() {
 
@@ -32,15 +31,15 @@ export default function Hours() {
     <div 
     className=' font-body
     bg-e6palette-700 drop-shadow-sm 
-    text-3xl text-e6palette-600 md:text-4xl min-h-screen'>
-      <h1 className=' flex pt-16 justify-center text-6xl font-bold text-e6palette-500'>
+    text-2xl text-e6palette-600 md:text-4xl min-h-screen'>
+      <h1 className=' flex pt-12 justify-center text-6xl font-bold text-e6palette-500'>
       Hours
       </h1> 
       <motion.ul 
       initial = {{opacity:0}}
       whileInView={{opacity:1}}
       className='drop-shadow-sm font-medium 
-      items-center justify-items-center z-10 py-12  
+      items-center justify-items-center z-10 pt-12 pb-8 
       grid grid-rows-6 grid-cols-2 gap-4 px-0 md:px-20 mx-2
       '
       transition={{duration: 1}}

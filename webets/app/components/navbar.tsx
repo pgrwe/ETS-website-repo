@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import { IBM_Plex_Mono } from 'next/font/google';
 
 
-// const navfont = IBM_Plex_Mono({weight: '500', subsets: ['latin']})
 
 
 
