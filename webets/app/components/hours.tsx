@@ -2,7 +2,7 @@
 import Text from './text'
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from 'framer-motion';
 import { IBM_Plex_Mono } from 'next/font/google';
 
 
@@ -29,9 +29,10 @@ export default function Hours() {
   }, []);
   return (
     <div 
-    className=' font-body
-    bg-e6palette-700 drop-shadow-sm 
-    text-2xl text-e6palette-600 md:text-4xl min-h-screen'>
+    className='font-body bg-foggy_slate-100
+    drop-shadow-sm text-2xl text-e6palette-600 
+    md:text-4xl min-h-screen h-screen'
+    >
       <h1 className=' flex pt-12 justify-center text-6xl font-bold text-e6palette-500'>
       Hours
       </h1> 
@@ -84,7 +85,7 @@ export default function Hours() {
             <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-600"></span>
             </Link>
           </button>
-          <div className='text-sm'>
+          <div className='text-sm mt-4'>
             We are located on the first floor of the technology hub, walk-ins are encouraged!
           </div>
       </div>

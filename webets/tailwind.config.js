@@ -25,7 +25,11 @@ module.exports = {
           600: '#231c24',
           700: '#acbfbf',
           800: '#826f56',
-          900: '#322E33',
+          900: '#322E33', 
+        },
+        'custom':{
+          100: '#4d455c',
+          200: '#524f59'
         },
         'paper_purple_dark': '#3b405e',
         'paper_purple_light': '#4f3a54',
