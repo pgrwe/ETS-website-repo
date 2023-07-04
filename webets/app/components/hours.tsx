@@ -80,7 +80,7 @@ export default function Hours() {
           className="group">
             <Link href={maplink}>
             <div className="drop-shadow-xl">Click here for our location!</div>
-            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-600"></span>
+            <span className="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-600"></span>
             </Link>
           </button>
           <div className='text-sm mt-4'>
