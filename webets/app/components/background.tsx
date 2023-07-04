@@ -14,6 +14,8 @@ export default function Background() {
       setIsLargeScreen(window.innerWidth >= 768);
     }
 
+    handleResize(); // very important call - will not create parallax when component is first mounted
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
     // Clean up the event listener when the component unmounts

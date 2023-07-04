@@ -19,6 +19,8 @@ export default function Home() {
       setIsLargeScreen(window.innerWidth >= 768);
     };
 
+    handleResize(); // very important call - will not create parallax when component is first mounted
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
     
