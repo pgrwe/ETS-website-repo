@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+// This is a utility component for the text that changes at the bottom of the hours component
+// Controls the animations, apperance, height, size, etc... of the changing text
 const Text = ({ text }: any) => {
   return (
     <motion.div
@@ -8,7 +10,7 @@ const Text = ({ text }: any) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 1 }}
     >
       {text}
     </motion.div>

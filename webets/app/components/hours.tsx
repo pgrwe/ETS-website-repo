@@ -3,7 +3,6 @@ import Text from './text'
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
-import { IBM_Plex_Mono } from 'next/font/google';
 
 
 export default function Hours() {
@@ -40,9 +39,8 @@ export default function Hours() {
       initial = {{opacity:0}}
       whileInView={{opacity:1}}
       className='drop-shadow-sm font-medium 
-      items-center justify-items-center z-10 pt-12 pb-8 
-      grid grid-rows-6 grid-cols-2 gap-4 px-0 md:px-20 mx-2
-      '
+      items-center justify-items-center z-10 pt-12 pb-4 md:pb-8 
+      grid grid-rows-6 grid-cols-2 gap-4 px-0 md:px-20 mx-2'
       transition={{duration: 1}}
       > 
         Monday:
