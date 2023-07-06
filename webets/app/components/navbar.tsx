@@ -32,7 +32,7 @@ export default function NavBar() {
           {menu && (
             <DropdownMenu.Portal forceMount>
               <DropdownMenu.Content className='bg-neutral-900 pt-12 
-              w-screen text-e6palette-200 text-xl h-screen 
+              w-screen text-e6palette-200 text-2xl h-screen 
               grid grid-cols-2 text-center px-4'
               asChild
               >
@@ -41,11 +41,11 @@ export default function NavBar() {
               animate = {{ opacity: 1 }}
               exit={{ opacity: 0}}
               >
-                <DropdownMenu.Item className='w-full h-full' >3D Printing
+                <DropdownMenu.Item className='w-full h-full' >3D Printing & Modelling
                 </DropdownMenu.Item>
-                <DropdownMenu.Item className='w-full h-full' >3D Modelling</DropdownMenu.Item> 
+                <DropdownMenu.Item className='w-full h-full' >2D Editing & Design</DropdownMenu.Item> 
                 <DropdownMenu.Item className='w-full h-full' >Photo/Video Editing</DropdownMenu.Item>
-                <DropdownMenu.Item className='w-full h-full' >2D Design</DropdownMenu.Item>
+                <DropdownMenu.Item className='w-full h-full' >High Preformance Equipment</DropdownMenu.Item>
               </motion.div>
               </DropdownMenu.Content>
             </DropdownMenu.Portal>
@@ -53,16 +53,20 @@ export default function NavBar() {
           </AnimatePresence>
         </DropdownMenu.Root>
 
-        <Link href='/about' className="group">
-          <div className="drop-shadow-xl">About</div>
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
-        </Link>
-        <Link href='/about' className="group">
-          <div className="drop-shadow-xl">Contact</div>
-          <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
-        </Link>
-
+        <div className={`${!menu ? 'transition-opacity duration-300 opacity-100' : 'transition-opacity duration-300 opacity-0'}
+          flex flex-row gap-16`}>
+          <Link href='/about' className="group">
+            <div className="drop-shadow-xl">About</div>
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
+          </Link>
+          
+          <Link href='/contact' className="group">
+            <div className="drop-shadow-xl">Contact</div>
+            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-e6palette-800"></span>
+          </Link> 
         </div>
+
+      </div>
     </nav>
   );
 }

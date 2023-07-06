@@ -29,7 +29,8 @@ module.exports = {
         },
         'custom':{
           100: '#4d455c',
-          200: '#524f59'
+          200: '#524f59',
+          300: '#7ec281'
         },
         'paper_purple_dark': '#3b405e',
         'paper_purple_light': '#4f3a54',

@@ -1,5 +1,5 @@
 'use client'
-import Text from './text'
+import Text from '../utils/handleText'
 import { useState, useEffect } from 'react'
 import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -28,7 +28,7 @@ export default function Hours() {
   }, []);
   return (
     <div 
-    className='font-body bg-foggy_slate-100
+    className=' bg-foggy_slate-100
     drop-shadow-sm text-2xl text-e6palette-600 
     md:text-4xl min-h-screen h-screen'
     >
@@ -38,7 +38,7 @@ export default function Hours() {
       <motion.ul 
       initial = {{opacity:0}}
       whileInView={{opacity:1}}
-      className='drop-shadow-sm font-medium 
+      className='drop-shadow-sm font-semibold font-display 
       items-center justify-items-center z-10 pt-12 pb-4 md:pb-8 
       grid grid-rows-6 grid-cols-2 gap-4 px-0 md:px-20 mx-2'
       transition={{duration: 1}}

@@ -1,48 +1,22 @@
 'use client'
 import './globals.css'
-import { SlArrowDown } from 'react-icons/sl'
-import { useState, useEffect } from 'react'
+import handleScroll from './utils/handleScroll';
+import { SlArrowDown } from 'react-icons/sl';
 import { Icon } from '@iconify/react';
-import { Island_Moments } from 'next/font/google';
 
 
 export default function Home() {
-  const [scroll, setScroll] = useState(0); 
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScroll(window.scrollY);
-    };    
-
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 768);
-    };
-
-    handleResize(); // very important call - will not create parallax when component is first mounted
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-    
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize',handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  const { scroll, isLargeScreen } = handleScroll();
   const scrollToBottom = () => {
     window.scroll({
       top: document.body.scrollHeight,
       behavior: 'smooth',
     });
   };
-  console.log(scroll)
   return (
     <div 
-    className='min-h-screen pt-8 md:pt-16 flex flex-col mx-4 justify-center 
-    drop-shadow-lg text-e6palette-200 transform-none lg:transform'
+    className='min-h-screen pt-2 flex flex-col mx-4 justify-center 
+    drop-shadow-lg text-e6palette-200'
     style={{
       transform: isLargeScreen ? `translateY(${scroll/2}px)` : undefined
     }}
@@ -58,7 +32,7 @@ export default function Home() {
           <Icon icon = 'mdi:printer-3d' className='animate-pulse relative object-fill inline pb-1 ml-4'/>
        </h1>
       <h3 className='pt-20 md:pt-32 text-center mx-auto text-2xl/7 font-medium'>
-        Binghamton University&apos;s 
+        <div className='inline text-custom-300'> Binghamton University&apos;s </div>
         <br/>
         Premier MakerSpace.
         <p
